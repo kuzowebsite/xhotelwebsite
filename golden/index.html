@@ -63,9 +63,11 @@
 			<div class="top_tag">
 				<p>XHOTEL-д тавтай морил!</p>
 				<h1>It’s nice to Meet you</h1>	
-				<a href="#service">
-					<button class="button"><text>App татах</text></button>
-				</a>
+				<a href="https://raw.githubusercontent.com/kuzowebsite/xhotelapkdownloadlink/main/XHOTEL.apk" 
+   download="XHOTEL.apk" 
+   id="download-link">
+    <button class="button" id="app-download-btn">App татах</button>
+</a>
 			</div>
 		</div>
 		</div>
@@ -347,6 +349,12 @@
 			</div>
 		</div>
 	</footer>
+
+	<script>
+		document.getElementById('app-download-btn').addEventListener('click', function(event) {
+		  this.textContent = 'ТАТАГДСАН';
+		});
+	  </script>
 
 	<script src="https://kit.fontawesome.com/f70f4c2534.js" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
