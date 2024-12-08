@@ -134,11 +134,6 @@ $(".items-inner div div").on("click", function () {
     $(".app-open-body").html("<iframe src='apps/chess.html'></iframe>");
   }
 
-  //horse run
-  if ($(this).attr("id") === "horse") {
-    $(".app-open-body").html("<iframe src='apps/horse_run.html'></iframe>");
-  }
-
   if ($(this).attr("id") === "daam") {
     $(".app-open-body").html("<iframe src='apps/daam.html'></iframe>");
   }
