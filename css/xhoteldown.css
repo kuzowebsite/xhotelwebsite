@@ -1,0 +1,87 @@
+/* Ерөнхий стилүүд */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+#download-screen {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 1.8rem; /* Их дэлгэц дээр жижигрүүлсэн */
+  color: #333;
+}
+
+p {
+  font-size: 0.9rem; /* Илүү жижиг текст */
+  color: #666;
+}
+
+.download-button {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem; /* Илүү жижиг товчлуур */
+  transition: background-color 0.3s ease; /* Hover үед өнгө зөөлөн шилжих */
+}
+
+.download-button:hover {
+  background-color: #2980b9;
+}
+
+.download-button:active {
+  background-color: #1f6c9d; /* Дарсан үед өнгө өөрчлөгдөх */
+}
+
+.floor {
+  width: 100%;
+  height: 5px;
+  background-color: #3498db;
+}
+
+/* Media query - утасны дэлгэцийн хэмжээнд тохируулах */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.4rem; /* Хүлээн зөвшөөрөхүйц томруулалт */
+  }
+
+  p {
+    font-size: 0.8rem; /* Илүү жижиг текст */
+  }
+
+  .download-button {
+    padding: 10px 20px;
+    font-size: 0.9rem; /* Товчлуурын хэмжээ ч бас жижигрүүлнэ */
+  }
+
+  .floor {
+    height: 3px;
+  }
+}
+
+/* Media query - маш жижиг дэлгэцийн хувьд (жишээ нь, гар утас) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 0.6rem; /* Илүү жижиг үсэг */
+  }
+
+  p {
+    font-size: 0.4rem; /* Маш жижиг текст */
+  }
+
+  .download-button {
+    padding: 8px 16px;
+    font-size: 0.4rem; /* Товчлуур илүү жижиг */
+  }
+
+  .floor {
+    height: 2px;
+  }
+}

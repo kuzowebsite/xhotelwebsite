@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const path = require("path");
+      const GoogleAssistant = require("google-assistant");
+      const config = {
+        auth: {
+          keyFilePath: path.resolve(__dirname, "YOUR_API_KEY_FILE_PATH.json"),
+         
+          savedTokensPath: path.resolve(__dirname, "tokens.json"),
+          
+          oauth2Client: YOUR_CLIENT,
+        },
+        
+        conversation: {
+          audio: {
+            encodingIn: "LINEAR16", 
+            sampleRateIn: 16000, 
+            encodingOut: "LINEAR16", 
+            sampleRateOut: 24000, 
+          },
+          lang: "en-US", 
+          deviceModelId: "xxxxxxxx",
+          deviceId: "xxxxxx", 
+          deviceLocation: {
+            coordinates: {
+              
+              latitude: xxxxxx,
+              longitude: xxxxx,
+            },
+          },
+          textQuery: "What time is it?", 
+          isNew: true,
+          screen: {
+            isOn: true, 
+          },
+        },
+      };
+
+      const assistant = new GoogleAssistant(config.auth);
+
+      
+      const startConversation = (conversation) => {
+        
+        
+
+        conversation
+          .on("audio-data", (data) => {
+            
+            
+          })
+          .on("end-of-utterance", () => {
+            
+          })
+          .on("transcription", (data) => {
+            
+          })
+          .on("response", (text) => {
+            
+          })
+          .on("volume-percent", (percent) => {
+           
+          })
+          .on("device-action", (action) => {
+            
+          })
+          .on("screen-data", (screen) => {
+            
+          })
+          .on("ended", (error, continueConversation) => {
+            
+            if (error) console.log("Conversation Ended Error:", error);
+            else if (continueConversation) assistant.start();
+            else console.log("Conversation Complete");
+          })
+          .on("data", (data) => {
+            
+          })
+          .on("error", (error) => {
+            
+          });
+      };
+
+      assistant
+        .on("ready", () => assistant.start(config.conversation))
+        .on("started", startConversation);
+
+    </script>
+  </body>
+</html>
