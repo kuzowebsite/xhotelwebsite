@@ -1,180 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/daam2.css">
-  <link rel="stylesheet" href="/css/daam1.css">
-  <title>Checkers</title>
-</head>
-<body>
-  <header id="player-1" class="active">
-    <p>Тоглогч 1</p>
-    <p>Оноо: <span id="player-1-score" class="active">0</span></p>
-    <p>Минут: <span class="time">00:00</span></p>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/h_run.css" />
+    <link rel="stylesheet" href="../css/xhoteldown.css" />
+  </head>
+  <body>
+    <input type="checkbox" id="toggle" />
+    <label for="toggle">
+      <div class="floor"></div>
 
-  <header id="player-2">
-    <span>Тоглогч 2:</span>
-    <section id="player-2-score">0</section>
-    <p>Минут: <span class="time">00:00</span></p>
+      <div id="download-screen" class="download-screen">
+        <h1>WELCOME</h1>
+        <p>SKY Movie ТАТАЖ АВАХ</p>
+        <p>ЗӨВХӨН АНДРОЙД!</p>
+        <a href="https://raw.githubusercontent.com/kuzowebsite/skymovie/main/SKY Movie.apk" 
+           download="SKY Movie.apk" 
+           class="download-button">
+            ТАТАХ
+        </a>
+    </div>
+    </label>
+    <script>
+      document.querySelector('.download-button').addEventListener('click', function() {
+        this.textContent = 'ТАТАГДСАН'; // Товчлуурын текстийг "ТАТАГДСАН" гэж солих
+      });
+    </script>
     
-  </header>
-
-  <main id="main">
-    <section class="board">
-        <div class="square hollow"></div>
-        <div class="square black"></div>
-        <div class="square hollow"></div>
-        <div class="square black"></div>
-        <div class="square hollow"></div>
-        <div class="square black"></div>
-        <div class="square hollow"></div>
-        <div class="square black"></div>
-
-        <div class="square black"></div>
-        <div class="square hollow"></div>
-        <div class="square black"></div>
-        <div class="square hollow"></div>
-        <div class="square black"></div>
-        <div class="square hollow"></div>
-        <div class="square black"></div>
-        <div class="square hollow"></div>
-        
-        <div class="square hollow"></div>
-        <div class="square black"></div>
-        <div class="square hollow"></div>
-        <div class="square black"></div>
-        <div class="square hollow"></div>
-        <div class="square black"></div>
-        <div class="square hollow"></div>
-        <div class="square black"></div>
-
-        <div class="square black"></div>
-        <div class="square hollow"></div>
-        <div class="square black"></div>
-        <div class="square hollow"></div>
-        <div class="square black"></div>
-        <div class="square hollow"></div>
-        <div class="square black"></div>
-        <div class="square hollow"></div>
-
-        <div class="square hollow"></div>
-        <div class="square black"></div>
-        <div class="square hollow"></div>
-        <div class="square black"></div>
-        <div class="square hollow"></div>
-        <div class="square black"></div>
-        <div class="square hollow"></div>
-        <div class="square black"></div>
-
-        <div class="square black"></div>
-        <div class="square hollow"></div>
-        <div class="square black"></div>
-        <div class="square hollow"></div>
-        <div class="square black"></div>
-        <div class="square hollow"></div>
-        <div class="square black"></div>
-        <div class="square hollow"></div>
-
-        <div class="square hollow"></div>
-        <div class="square black"></div>
-        <div class="square hollow"></div>
-        <div class="square black"></div>
-        <div class="square hollow"></div>
-        <div class="square black"></div>
-        <div class="square hollow"></div>
-        <div class="square black"></div>
-
-        <div class="square black"></div>
-        <div class="square hollow"></div>
-        <div class="square black"></div>
-        <div class="square hollow"></div>
-        <div class="square black"></div>
-        <div class="square hollow"></div>
-        <div class="square black"></div>
-        <div class="square hollow"></div>
-
-        <section class="men">
-
-          <div class="man empty"><div></div></div>
-          <div class="man empty "><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-          <div class="man empty"><div></div></div>
-
-
-        </section>
-    </section>
-  </main>
-
-  <footer></footer>
-</body>
-<script src="/js/daam.js"></script>
+  </body>
 </html>
